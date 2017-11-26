@@ -25,7 +25,8 @@ public class touch : MonoBehaviour {
 
 	public void FixedUpdate()
 	{
-		if (Input.GetMouseButtonUp (0))
+		if// (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
+			(Input.GetMouseButtonUp (0))//
 		{
 			TakeShot ();
 
@@ -64,8 +65,7 @@ public class touch : MonoBehaviour {
 		responseData = www.text; // Save the response as JSON string
 		Debug.Log(responseData);
 
-		GameObject.Find("speech").GetComponent<TextMesh>().text = "TESTING";
-			//+findValue(responseData);
+		GameObject.Find("speech").GetComponent<TextMesh>().text = findValue(responseData);
 		//Debug.Log (findValue(responseData));
 
 

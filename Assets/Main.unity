@@ -314,7 +314,7 @@ Mesh:
     vertexCount: 4
     localAABB:
       m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.5, y: 0, z: 0.2606383}
+      m_Extent: {x: 0.5, y: 0, z: 0.5}
   m_Shapes:
     vertices: []
     shapes: []
@@ -366,7 +366,7 @@ Mesh:
       format: 0
       dimension: 0
     m_DataSize: 128
-    _typelessdata: 000000bf00000000627285be000000000000803f000000000000000000000000000000bf000000006272853e000000000000803f00000000000000000000803f0000003f00000000627285be000000000000803f000000000000803f000000000000003f000000006272853e000000000000803f000000000000803f0000803f
+    _typelessdata: 000000bf00000000000000bf000000000000803f000000000000000000000000000000bf000000000000003f000000000000803f00000000000000000000803f0000003f00000000000000bf000000000000803f000000000000803f000000000000003f000000000000003f000000000000803f000000000000803f0000803f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -445,7 +445,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 060b4e7f6d274360ac45d99d060a6a93, type: 3}
+        m_Texture: {fileID: 2800000, guid: 535b91fd22f546249cf0ded3d0f86ade, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -553,9 +553,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1029184447}
-  m_Text: 'I''m Trumph blah blah blah
-
-    asdfasdfasdf'
+  m_Text: 'I''m Trumph '
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1

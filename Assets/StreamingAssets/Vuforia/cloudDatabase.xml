@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="5pound" size="5.000000 2.596154" />
+    <ImageTarget name="redbull" size="5.000000 5.000000" />
+    <ImageTarget name="Coke" size="4.000000 4.000000" />
+    <ImageTarget name="fanta" size="4.000000 4.000000" />
+    <ImageTarget name="blackKeyboard" size="6.000000 2.193548" />
+    <ImageTarget name="whiteKeyboard" size="7.000000 7.000000" />
+    <ImageTarget name="mouse" size="3.000000 3.000000" />
+    <ImageTarget name="white" size="5.000000 3.873240" />
+    <ImageTarget name="hat2" size="4.000000 4.000000" />
+    <ImageTarget name="hat" size="5.000000 6.701031" />
+    <ImageTarget name="pen1" size="5.000000 5.000000" />
+    <ImageTarget name="pen" size="5.000000 2.972509" />
     <ImageTarget name="poundTarget" size="5.000000 2.606383" />
   </Tracking>
 </QCARConfig>
