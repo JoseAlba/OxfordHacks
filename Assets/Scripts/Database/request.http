@@ -1,0 +1,14 @@
+GET https://api.exchangeratesapi.io/latest HTTP/1.1
+
+###
+
+GET https://api.exchangeratesapi.io/2010-01-12 HTTP/1.1
+
+###
+
+GET https://api.exchangeratesapi.io/latest?base=USD HTTP/1.1
+
+###
+
+GET https://api.exchangeratesapi.io/history?start_at=2018-01-01&end_at=2018-09-01 HTTP/1.1
+
