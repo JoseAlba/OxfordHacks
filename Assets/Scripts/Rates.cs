@@ -39,6 +39,78 @@ public class Rates {
 	public double IDR;
 	public double RUB;
 
+	public double getCurrency(String shortcode){
+		shortcode.Replace(@"[^\u0009\u000A\u000D\u0020-\u007E]", string.Empty);
+		
+		if(shortcode.Equals("BGN"))
+			return BGN;
+		if(shortcode.Equals("CAD"))
+			return CAD;
+		if(shortcode.Equals("BRL"))
+			return BRL;
+		if(shortcode.Equals("HUF"))
+			return HUF;
+		if(shortcode.Equals("DKK"))
+			return DKK;
+		if(shortcode.Equals("JPY"))
+			return JPY;
+		if(shortcode.Equals("ILS"))
+			return ILS;
+		if(shortcode.Equals("TRY"))
+			return TRY;
+		if(shortcode.Equals("RON"))
+			return RON;
+		if(shortcode.Equals("GBP"))
+			return GBP;
+		if(shortcode.Equals("PHP"))
+			return PHP;
+		if(shortcode.Equals("HRK"))
+			return HRK;
+		if(shortcode.Equals("NOK"))
+			return NOK;
+		if(shortcode.Equals("ZAR"))
+			return ZAR;
+		if(shortcode.Equals("MXN"))
+			return MXN;
+		if(shortcode.Equals("AUD"))
+			return AUD;
+		if(shortcode.Equals("USD"))
+			return USD;
+		if(shortcode.Equals("KRW"))
+			return KRW;
+		if(shortcode.Equals("HKD"))
+			return HKD;
+		if(shortcode.Equals("EUR"))
+			return EUR;
+		if(shortcode.Equals("ISK"))
+			return ISK;
+		if(shortcode.Equals("CZK"))
+			return CZK;
+		if(shortcode.Equals("THB"))
+			return THB;
+		if(shortcode.Equals("MYR"))
+			return MYR;
+		if(shortcode.Equals("NZD"))
+			return NZD;
+		if(shortcode.Equals("PLN"))
+			return PLN;
+		if(shortcode.Equals("CHF"))
+			return CHF;
+		if(shortcode.Equals("SEK"))
+			return SEK;
+		if(shortcode.Equals("CNY"))
+			return CNY;
+		if(shortcode.Equals("SGD"))
+			return SGD;
+		if(shortcode.Equals("INR"))
+			return INR;
+		if(shortcode.Equals("IDR"))
+			return IDR;
+		if(shortcode.Equals("RUB"))
+			return RUB;
+		return 0;
+	}
+
 	public override string ToString(){
 		return "BGN: " + this.BGN +
 			"\nCAD: " + this.CAD +

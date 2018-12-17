@@ -63,5 +63,13 @@ namespace Database{
 
 			return new Bill();
 		}
+
+		public void printBills(){
+			foreach(Bill bill in bills){
+				Debug.Log(bill.code);
+				if(bill.code == null)
+					Debug.Log(bill);
+			}
+		}
 	}
 }

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="5000_colombiam_obverse" size="5.000000 2.563694" />
+    <ImageTarget name="500_euro_reverse" size="5.000000 2.812500" />
+    <ImageTarget name="500_euro_obverse" size="5.000000 2.531646" />
+    <ImageTarget name="100_euro_reverse" size="5.000000 2.790698" />
+    <ImageTarget name="100_euro_obverse" size="5.000000 2.821429" />
+    <ImageTarget name="50_euro_reverse" size="5.000000 2.835571" />
+    <ImageTarget name="50_euro_obverse" size="5.000000 2.704918" />
+    <ImageTarget name="20_euro_obverse" size="5.000000 2.684564" />
+    <ImageTarget name="10_euro_obverse" size="5.000000 2.571885" />
+    <ImageTarget name="5_euro_obverse" size="5.000000 2.730263" />
+    <ImageTarget name="50000_colombian_obverse" size="5.000000 2.500000" />
+    <ImageTarget name="20000_colombian_obverse" size="5.000000 2.083333" />
+    <ImageTarget name="10000_colombian_obverse" size="5.000000 2.083333" />
+    <ImageTarget name="5000_colombian_reverse" size="5.000000 2.500000" />
+    <ImageTarget name="2000_colombian_obverse" size="5.000000 2.492188" />
+    <ImageTarget name="1000_colombian_obverse" size="5.000000 2.500000" />
+    <ImageTarget name="1_american_obverse" size="5.000000 2.170000" />
+    <ImageTarget name="1_american_reverse" size="5.000000 2.130000" />
+    <ImageTarget name="2_american_obverse" size="5.000000 2.110000" />
+    <ImageTarget name="2_american_reverse" size="5.000000 2.080000" />
+    <ImageTarget name="5_american_obverse" size="5.000000 2.110000" />
+    <ImageTarget name="5_american_reverse" size="5.000000 2.120000" />
+    <ImageTarget name="10_american_obverse" size="5.000000 2.110000" />
+    <ImageTarget name="10_american_reverse" size="5.000000 2.220000" />
+    <ImageTarget name="20_american_obverse" size="5.000000 2.148594" />
+    <ImageTarget name="20_american_reverse" size="5.000000 2.140000" />
+    <ImageTarget name="50_american_obverse" size="5.000000 2.150000" />
+    <ImageTarget name="50_american_reverse" size="5.000000 2.220000" />
+    <ImageTarget name="100_american_obverse" size="5.000000 2.108434" />
+    <ImageTarget name="100_american_reverse" size="5.000000 2.090000" />
+    <ImageTarget name="5_canadian_obverse" size="5.000000 2.280514" />
+    <ImageTarget name="5_canadian_reverse" size="5.000000 2.280514" />
+    <ImageTarget name="10_canadian_obverse" size="5.000000 2.289157" />
+    <ImageTarget name="10_canadian_reverse" size="5.000000 2.288000" />
+    <ImageTarget name="20_canadian_obverse" size="5.000000 2.287500" />
+    <ImageTarget name="20_canadian_reverse" size="5.000000 2.287500" />
+    <ImageTarget name="50_canadian_obverse" size="5.000000 2.287500" />
+    <ImageTarget name="50_canadian_reverse" size="5.000000 2.287500" />
+    <ImageTarget name="100_canadian_obverse" size="5.000000 2.287500" />
+    <ImageTarget name="100_canadian_reverse" size="5.000000 2.287500" />
+    <ImageTarget name="50000_KRW_2009_rev" size="5.000000 2.263398" />
+    <ImageTarget name="50000_KRW_2009_ob" size="5.000000 2.263398" />
+    <ImageTarget name="5000_won_serieV_reverse" size="5.000000 2.392601" />
+    <ImageTarget name="5000_won_serieV_obverse" size="5.000000 2.398809" />
+    <ImageTarget name="1000_won_serieIII_reverse" size="5.000000 2.515763" />
+    <ImageTarget name="1000_won_serieIII_obverse" size="5.000000 2.518939" />
+    <ImageTarget name="500_won_1982_reverse" size="5.000000 5.000000" />
+    <ImageTarget name="500_won_1982_obverse" size="5.000000 5.000000" />
+    <ImageTarget name="100_won_1983_reverse" size="5.000000 5.000000" />
+    <ImageTarget name="100_won_1983_obverse" size="5.000000 5.000000" />
+    <ImageTarget name="50_won_1983_reverse" size="5.000000 5.000000" />
+    <ImageTarget name="50_won_1983_obverse" size="5.000000 5.000000" />
+    <ImageTarget name="10_won_2006_reverse" size="5.000000 4.829545" />
+    <ImageTarget name="10_won_2006_obverse" size="5.000000 5.000000" />
+    <ImageTarget name="10000_korean_won_back" size="5.000000 2.308333" />
+    <ImageTarget name="10000_korean_won_front" size="5.000000 2.309008" />
+  </Tracking>
+</QCARConfig>

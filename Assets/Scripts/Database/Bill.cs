@@ -41,6 +41,56 @@ using UnityEngine;
 			return "key: " + this.key + "\nphoto: "+ this.photo + "\nworth: " + this.worth + "\ncode: " + this.code + "\nhistory: " + this.history +
 			"\nfrench: " + this.french + "\nspanish: " + this.spanish + "\ndanish: " + this.danish + "\nchinese: " + this.chinese + "\nkorean: " + this.korean +"\n";
 		}
-		
+		// public string getLanguage(string language){
+		// 	if(language.Equals("history")){
+		// 		return this.history;
+		// 	}
+		// 	if(language.Equals("spanish")){
+		// 		return this.spanish;
+		// 	}
+		// 	if(language.Equals("french")){
+		// 		return this.french;
+		// 	}
+		// 	if(language.Equals("danish")){
+		// 		return this.history;
+		// 	}
+		// 	if(language.Equals("chinese")){
+		// 		return this.history;
+		// 	}
+		// 	if(language.Equals("korean")){
+		// 		return this.history;
+		// 	}
+		// 	return "Not a proper option";
+
+		// }
+
+		public string getLanguage(string language){
+			language.Replace(@"[^\u0009\u000A\u000D\u0020-\u007E]", string.Empty);
+
+			// string onlyLetters = new String(language.Where(Char.IsLetter).ToArray());
+
+			// Debug.Log(language);
+			// Debug.Log("history");
+			if(language == "history"){
+				return this.history;
+			}
+			if(language == "spanish"){
+				return this.spanish;
+			}
+			if(language == "french"){
+				return this.french;
+			}
+			if(language == "danish"){
+				return this.history;
+			}
+			if(language == "chinese"){
+				return this.history;
+			}
+			if(language == "korean"){
+				return this.history;
+			}
+			return "Not a proper option";
+
+		}
 	}
 // }

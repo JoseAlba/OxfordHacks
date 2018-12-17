@@ -38,11 +38,14 @@ public class DynamicDataSetLoader : MonoBehaviour
         this.exchange = JsonUtility.FromJson<myForex>(jsonData);
 
         jsonFile = "Assets/Scripts/dropdownlanguage.dat";
-        this.language = this.readJsonData(this.jsonFile);
+        // jsonDate = this.readJsonData(this.jsonFile);
+        // this.language = jsonData.Split(new [] { '\r', '\n' }).FirstOrDefault();
+        this.language = this.readFirstLine(this.jsonFile);
         Debug.Log(this.language);
 
         jsonFile = "Assets/Scripts/dropdowncurrency.dat";
-        this.currency = this.readJsonData(this.jsonFile);
+        this.currency = this.readFirstLine(this.jsonFile);
+
         Debug.Log(this.currency);
 
 
@@ -103,7 +106,37 @@ public class DynamicDataSetLoader : MonoBehaviour
 
                         // if(bills.doesItExsist(tb.TrackableName))
                         // augmentation.GetComponentInChildren<Text>().text = bills.returnBill(tb.TrackableName).ToString() + exchange.ToString();
-                        augmentation.GetComponentInChildren<TextMesh>().text = bills.returnBill(tb.TrackableName).ToString() + exchange.ToString();
+                        // augmentation.GetComponentInChildren<TextMesh>().text = bills.returnBill(tb.TrackableName).ToString() + exchange.ToString();
+                        // Debug.Log(bills.returnBill(tb.TrackableName).worth);
+                        // bills.printBills();
+                        double valueInCurrency;
+
+                        if(bills.returnBill(tb.TrackableName).code != null){
+                            // Debug.Log(bills.returnBill(tb.TrackableName).code);
+                            // Debug.Log(bills.returnBill(tb.TrackableName).worth);
+                            // Debug.Log(exchange.rates.getCurrency(bills.returnBill(tb.TrackableName).code));
+
+                            // Debug.Log(exchange.rates.getCurrency(this.currency));
+                            // Debug.Log();
+
+                            valueInCurrency = bills.returnBill(tb.TrackableName).worth / exchange.rates.getCurrency(bills.returnBill(tb.TrackableName).code) * exchange.rates.getCurrency(this.currency);
+                        } else{
+                            valueInCurrency = 0;
+                        }
+                        // Debug.Log(this.currency);
+                        // Debug.Log(this.language);
+                        Debug.Log(bills.returnBill(tb.TrackableName).getLanguage(this.language));
+                        bills.returnBill(tb.TrackableName).getLanguage(this.language);
+
+                        // string inputString = bills.returnBill(tb.TrackableName).getLanguage(this.language);
+                        // if(inputString != null){
+                            // string paragraph = this.SpliceText(inputString, 50);
+                            // Debug.Log(paragraph);
+                            // augmentation.GetComponentInChildren<TextMesh>().text = this.currency + ":  " + valueInCurrency +  "\n" + paragraph;                    
+                        // }
+                        // augmentation.GetComponentInChildren<TextMesh>().text = this.currency + ":  " + valueInCurrency +  "\n" + paragraph;
+                        augmentation.GetComponentInChildren<TextMesh>().text = this.currency + ":  " + valueInCurrency +  "\n" + bills.returnBill(tb.TrackableName).getLanguage(this.language);
+
 
                         mTrackableBehaviour = augmentation.GetComponent<TrackableBehaviour>();
 
@@ -195,6 +228,14 @@ public class DynamicDataSetLoader : MonoBehaviour
         return jsonData;
     }
 
+    public string readFirstLine(string path){
+        FileInfo theSourceFile = new FileInfo (path);
+        StreamReader reader = theSourceFile.OpenText();
+       
+        string text = reader.ReadLine();
+        return text;
+    }
+
     public void writeJsonData(string path, string jsonData)
     {
         //Write some text to the test.txt file
@@ -202,7 +243,23 @@ public class DynamicDataSetLoader : MonoBehaviour
         writer.WriteLine(jsonData);
         writer.Close();
     }
-
+    public string SpliceText(string inputText, int lineLength) {
+    
+        string[] stringSplit = inputText.Split(' ');
+        int charCounter = 0;
+        string finalString = "";
+    
+        for(int i=0; i < stringSplit.Length; i++){
+            finalString += stringSplit[i] + " ";
+            charCounter += stringSplit[i].Length;
+    
+            if(charCounter > lineLength){
+                finalString += "\n";
+                charCounter = 0;
+            }
+        }
+        return finalString;
+    }
     // public override string myForexToString(){
     // 	return "myForex: " + exchange.ToString(); 
     // }
