@@ -51,29 +51,34 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\changeCurrency.cs" />
+     <Compile Include="Assets\Scripts\changeLanguage.cs" />
+     <Compile Include="Assets\Scripts\changeScene.cs" />
      <Compile Include="Assets\Scripts\currencyCoverter.cs" />
+     <Compile Include="Assets\Scripts\currencyDropdown.cs" />
      <Compile Include="Assets\Scripts\Database\Bill.cs" />
      <Compile Include="Assets\Scripts\Database\Bills.cs" />
      <Compile Include="Assets\Scripts\Database\HandleTextFile.cs" />
      <Compile Include="Assets\Scripts\Database\JsonHelper.cs" />
      <Compile Include="Assets\Scripts\Database\Serializer.cs" />
      <Compile Include="Assets\Scripts\duplicate.cs" />
+     <Compile Include="Assets\Scripts\DynamicDataSetLoader.cs" />
+     <Compile Include="Assets\Scripts\ImageTargetPlayAudio.cs" />
+     <Compile Include="Assets\Scripts\languageDropdown.cs" />
+     <Compile Include="Assets\Scripts\myCurrency.cs" />
+     <Compile Include="Assets\Scripts\myForex.cs" />
+     <Compile Include="Assets\Scripts\Rates.cs" />
      <Compile Include="Assets\Scripts\translator.cs" />
-     <Compile Include="Assets\Scripts\TrumpController.cs" />
      <Compile Include="Assets\Vuforia\Scripts\DefaultInitializationErrorHandler.cs" />
      <Compile Include="Assets\Vuforia\Scripts\DefaultTrackableEventHandler.cs" />
      <None Include="Assets\Vuforia\Shaders\ColoredLines.shader" />
-     <None Include="Assets\StreamingAssets\Vuforia\VuforiaMars_ModelTarget.xml" />
      <None Include="Assets\Vuforia\Shaders\CameraDiffuse.shader" />
      <None Include="Assets\Vuforia\Shaders\VertexLitWithZ.shader" />
      <None Include="Assets\Vuforia\Shaders\OutlineOpaque.shader" />
-     <None Include="Assets\StreamingAssets\Vuforia\VuforiaMars_Object_OT.xml" />
      <None Include="Assets\Vuforia\Shaders\DepthMask.shader" />
-     <None Include="Assets\StreamingAssets\Vuforia\VuforiaMars_Images.xml" />
-     <None Include="Assets\Vuforia\Shaders\BrightTexture.shader" />
-     <None Include="Assets\StreamingAssets\Vuforia\VuforiaMars_VuMark.xml" />
-     <None Include="Assets\Vuforia\Shaders\DepthContour.shader" />
      <None Include="Assets\StreamingAssets\Vuforia\cloudDatabase.xml" />
+     <None Include="Assets\Vuforia\Shaders\BrightTexture.shader" />
+     <None Include="Assets\Vuforia\Shaders\DepthContour.shader" />
      <None Include="Assets\Vuforia\Shaders\Text3D.shader" />
  <Reference Include="Facebook.Unity.Settings">
  <HintPath>/Users/Shared/Unity/OxfordHackathon/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
@@ -167,36 +172,6 @@
  </Reference>
  <Reference Include="UnityEditor.Facebook.Extensions">
  <HintPath>/Applications/Unity/PlaybackEngines/Facebook/UnityEditor.Facebook.Extensions.dll</HintPath>
- </Reference>
- <Reference Include="Editor">
- <HintPath>/Users/Shared/Unity/OxfordHackathon/Assets/Plugins/UnityPurchasing/Bin/Editor.dll</HintPath>
- </Reference>
- <Reference Include="Purchasing.Common">
- <HintPath>/Users/Shared/Unity/OxfordHackathon/Assets/Plugins/UnityPurchasing/Bin/Purchasing.Common.dll</HintPath>
- </Reference>
- <Reference Include="Stores">
- <HintPath>/Users/Shared/Unity/OxfordHackathon/Assets/Plugins/UnityPurchasing/Bin/Stores.dll</HintPath>
- </Reference>
- <Reference Include="Apple">
- <HintPath>/Users/Shared/Unity/OxfordHackathon/Assets/Plugins/UnityPurchasing/Bin/Apple/Apple.dll</HintPath>
- </Reference>
- <Reference Include="Security">
- <HintPath>/Users/Shared/Unity/OxfordHackathon/Assets/Plugins/UnityPurchasing/Bin/Security/live/Security.dll</HintPath>
- </Reference>
- <Reference Include="FacebookStore">
- <HintPath>/Users/Shared/Unity/OxfordHackathon/Assets/Plugins/UnityPurchasing/Bin/Facebook/FacebookStore.dll</HintPath>
- </Reference>
- <Reference Include="Tizen">
- <HintPath>/Users/Shared/Unity/OxfordHackathon/Assets/Plugins/UnityPurchasing/Bin/Tizen/Tizen.dll</HintPath>
- </Reference>
- <Reference Include="winrt">
- <HintPath>/Users/Shared/Unity/OxfordHackathon/Assets/Plugins/UnityPurchasing/winrt/winrt.dll</HintPath>
- </Reference>
- <Reference Include="ChannelPurchase">
- <HintPath>/Users/Shared/Unity/OxfordHackathon/Assets/Plugins/UnityChannel/ChannelPurchase.dll</HintPath>
- </Reference>
- <Reference Include="UnityStore">
- <HintPath>/Users/Shared/Unity/OxfordHackathon/Assets/Plugins/UnityChannel/UnityStore.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Advertisements">
  <HintPath>/Users/Jose/Library/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>

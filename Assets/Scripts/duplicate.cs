@@ -3,30 +3,61 @@ using System.Collections.Generic;
 using UnityEngine;
 using Database;
 using System.IO;
+using Vuforia;
 
 public class duplicate : MonoBehaviour {
 
 	// private int counter;
 	// public GameObject billsPrefab;
 	public string jsonFile;
-
+	public GameObject imageTargetPrefab;
+	private List<GameObject> _billInstances;
 
     // Use this for initialization
     void Start () {
-		jsonFile = "Assets/Scripts/Database/bills.json";
-		
-		string jsonData = this.readJsonData("Assets/Scripts/Database/bills.json");
+
+		this.jsonFile = "Assets/Scripts/Database/bills.json";
+		string jsonData = this.readJsonData(this.jsonFile);
 		Bills bills = this.fromJson(jsonData);
 
-		int counter = 0;		
+		Debug.Log(bills);
 
-		//TODO: work on Instantiating each GameObject so it reads it from the file
+		int counter = 0;
+		_billInstances = new List<GameObject>();
+
+
 		foreach(Bill bill in bills.bills){
-			// GameObject bills = Instantiate(billsPrefab, new Vector3(2 * counter,2 * counter,2 * counter), transform.rotation); 
+			counter++;
+			// GameObject bill = Instantiate(billsPrefab, new Vector3(2 * counter,2 * counter,2 * counter), transform.rotation); 
+			GameObject billInstance = createBillObject(imageTargetPrefab, counter);
 
+// TODO: modify each instance so that it gets bills ccharacteristics and it compares it to money use currencyconverter as example
+			// billInstance;
+			
+			// billInstance.GetComponent<"Image Target Behaviour">()
+			// billInstance.GetComponent<ImageTarget>().
+			billInstance.GetComponentInChildren<TextMesh>().text = bill.ToString();
+			// .Find("speech").GetComponent<TextMesh>().text = findValue(responseData);
+			// billInstance.GetComponent(typeof(ImageTargetBehaviour)) = bill.photo;
+			TrackableBehaviour bob = billInstance.GetComponent<TrackableBehaviour>();
+			Debug.Log("Testing");
+			Debug.Log(bob.TrackableName);
+			Debug.Log("Testing");
+
+			// ImageTargetBehaviour variableName = (ImageTargetBehaviour)billInstance.GetComponent(typeof(ImageTargetBehaviour));
+			// Debug.Log(variableName);
+
+
+			_billInstances.Add(billInstance);
 		}
-		counter ++;
 
+
+
+	}
+
+	public GameObject createBillObject(Object prefab, int lengthApart){
+		// Object bill_prefab = Instantiate(prefab, new Vector3(2 * lengthApart, 2 * lengthApart, 2 * lengthApart), transform.rotation);
+		return Instantiate(prefab, new Vector3(2 * lengthApart, 2 * lengthApart, 2 * lengthApart), transform.rotation) as GameObject;
 	}
 
 	public void exampleClass(){
@@ -37,7 +68,7 @@ public class duplicate : MonoBehaviour {
 		Korean_Won.code = "KRW";
 		Korean_Won.history = "Guy who made the Korean currency";
 
-		Bill Koren_Won_back = new Bill("10000_KRW_back","10000_korean_won_back", 10000, "KRW", "Some cicrle thing with handles");
+		Bill Koren_Won_back = new Bill("10000_KRW_back","10000_korean_won_back", 10000, "KRW", "Some cicrle thing with handles", "french", "spanish", "danish", "chinese", "korean");
 		Bill copy = new Bill(Korean_Won);
 
 		Bills bills = new Bills(new List<Bill>(){Korean_Won, Koren_Won_back, copy});
@@ -50,9 +81,10 @@ public class duplicate : MonoBehaviour {
 		bills = this.fromJson(player);
 		Debug.Log(bills);
 
-		Debug.Log(this.readJsonData("Assets/Scripts/Database/bills.json"));
 		Debug.Log("Testing");
 		this.writeJsonData("Assets/Scripts/Database/bills.json", player);
+		Debug.Log(this.readJsonData("Assets/Scripts/Database/bills.json"));
+
 	}
 	public string toJson(Bills bills){
 		return JsonHelper.ToJson(bills.ToArray(), true);

@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
-using UnityEditor;
 using System.IO;
 
-namespace Database{
-    public class HandleTextFile
+
+public class HandleTextFile
     {
         // private static string path = "Assets/Scripts/Database/bills.json";
         // [MenuItem("Tools/Write file")]
@@ -21,7 +20,7 @@ namespace Database{
         //     Debug.Log(asset.text);
         // }
 
-        [MenuItem("Tools/Read file")]
+        // [MenuItem("Tools/Read file")]
         public static void ReadString(){
             string path = "Assets/Scripts/Database/bills.json";
 
@@ -32,4 +31,3 @@ namespace Database{
         }
 
     }
-}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="50000_KRW_2009_rev" size="5.000000 2.263398" />
+    <ImageTarget name="50000_KRW_2009_ob" size="5.000000 2.263398" />
+    <ImageTarget name="5000_won_serieV_reverse" size="5.000000 2.392601" />
+    <ImageTarget name="5000_won_serieV_obverse" size="5.000000 2.398809" />
+    <ImageTarget name="1000_won_serieIII_reverse" size="5.000000 2.515763" />
+    <ImageTarget name="1000_won_serieIII_obverse" size="5.000000 2.518939" />
+    <ImageTarget name="500_won_1982_reverse" size="5.000000 5.000000" />
+    <ImageTarget name="500_won_1982_obverse" size="5.000000 5.000000" />
+    <ImageTarget name="100_won_1983_reverse" size="5.000000 5.000000" />
+    <ImageTarget name="100_won_1983_obverse" size="5.000000 5.000000" />
+    <ImageTarget name="50_won_1983_reverse" size="5.000000 5.000000" />
+    <ImageTarget name="50_won_1983_obverse" size="5.000000 5.000000" />
+    <ImageTarget name="10_won_2006_reverse" size="5.000000 4.829545" />
+    <ImageTarget name="10_won_2006_obverse" size="5.000000 5.000000" />
+    <ImageTarget name="10000_korean_won_back" size="5.000000 2.308333" />
+    <ImageTarget name="10000_korean_won_front" size="5.000000 2.309008" />
+  </Tracking>
+</QCARConfig>
